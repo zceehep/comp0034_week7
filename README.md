@@ -1,5 +1,7 @@
 # COMP0034 Week 6 Starter code and activities
 
+DO NOT USE - largely incomplete, rough outline only
+
 This repository contains the starter code for week 6 and the exercises for the following:
 
 - Create a base Jinja2 template and inherit in other pages
@@ -9,3 +11,5 @@ This repository contains the starter code for week 6 and the exercises for the f
 - Save signup data to a SQLite database
 
 If you wish to see a completed example of the above then look at the starter code for week 7.
+
+
