@@ -1,10 +1,11 @@
-# COMP0034 Week 5
+# COMP0034 Week 6 Starter code and activities
 
-This repository contains the start code for week5 and the exercises for the following:
+This repository contains the starter code for week 6 and the exercises for the following:
 
-- Create a Flask app
-- Configure a Flask app
-- Create a Flask app instance using the Application Factory pattern
-- Create a Blueprint for `community`
+- Create a base Jinja2 template and inherit in other pages
+- Create a signup form using Flask-WTF
+- Enable Flask flash messaging
+- Create a model for the signup
+- Save signup data to a SQLite database
 
-If you wish to see a completed example of the above then look at the starter code for week 6.
+If you wish to see a completed example of the above then look at the starter code for week 7.
