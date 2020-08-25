@@ -4,7 +4,7 @@ import pathlib
 
 class Config(object):
     """Set Flask base configuration"""
-    SECRET_KEY = 'dfdQbTOExternjy5xmCNaA'
+    SECRET_KEY = 'dfdQbTOExternjy5xmCNaA' # Replace with your own secret key! This should not be visible to others.
     DATA_PATH = str(pathlib.Path(__file__).parent.joinpath("data"))  # Creates the string of a path object
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + DATA_PATH + 'example.sqlite'
     SQLALCHEMY_TRACK_MODIFICATIONS = False

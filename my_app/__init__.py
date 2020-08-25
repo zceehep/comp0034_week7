@@ -18,11 +18,14 @@ def create_app(config_classname):
     app.config.from_object(config_classname)
 
     db.init_app(app)
-    # login_manager.init_app(app)
+    # login_manager.init_app(app) # Leave this commented until we enable the login functionality
     csrf.init_app(app)
 
     from my_app.community.community import community_bp
     app.register_blueprint(community_bp)
+
+    from my_app.main.main import main_bp
+    app.register_blueprint(main_bp)
 
     with app.app_context():
         from dash_app.dash import init_dashboard

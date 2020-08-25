@@ -64,7 +64,11 @@ When the Flask app runs this would be converted to:
 
 You can use this same structure to add any files in the `static` folder such as images or JavaScript.
 
-### 1.3 Add a navigation bar
+### 1.3 Add the Bootstrap javascript
+Refer to the [Bootstrap starter template](https://getbootstrap.com/docs/4.5/getting-started/introduction/#starter-template) which provides the links to use for the JavaScript.
+Some of the Bootstrap navbar functionality uses JavaScript so you will need to provide these.
+
+### 1.4 Add a navigation bar
 
 Use Bootstrap styling to create a navigation bar. For now it will include links to:
 
@@ -112,16 +116,16 @@ As with the CSS we will use a Jinja2 variable and the Flask `url_for()` as follo
 
 ```jinja2
 {# my_app home page #}
-<a class="nav-link" href="{{ url_for("index") }}">Home</a>
+<a class="nav-link" href="{{ url_for("main.index") }}">Home</a>
 
 {# community blueprint home page #}
-<a class="nav-link" href="{{ url_for("community_bp.index") }}">Community</a>
+<a class="nav-link" href="{{ url_for("community.index") }}">Community</a>
 
 {# Dash app home page - this isn't a Flask route so we will have to specify the path #}
 <a class="nav-link" href="/dashapp/">Dashboard</a>
 ```
 
-### 1.4 Add Jinja2 variables
+### 1.5 Add Jinja2 variables
 
 Add the following Jinja2 variables to your code to provide variables for the page title and the main content block and also to 
 
@@ -167,4 +171,10 @@ def index():
 
 Now restart your Flask app.
 
-Do the same for the community index page.
+## Apply the base layout to the community module index page
+
+Over to you! Repeat the steps for the my_app index for the community index.
+
+## Apply the same nav to the Dash app
+
+You do not need to do this, if you find a working solution, well done!
