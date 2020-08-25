@@ -128,7 +128,7 @@ The route returns the view using the `signup.html` template.
 def signup():
     form = SignupForm()
     if form.validate_on_submit():
-        name = form.name.data
+        name = form.first_name.data
         return f"Hello, {name}. You are signed up."
     return render_template('signup.html', title='Sign Up', form=form)
 ```
@@ -140,9 +140,12 @@ Try out what happens when you do and don't meet the validation for each form.
 ## Create a login form
 Use the knowledge gained from the steps above to create a login form that takes the email address and the password.
 
+Stop and restart the Flask app and go to http://127.0.0.1:5000/login/
+
 ## Extend your knowledge
-Using the online documentation try and add the following fields to the sign up: 
+Using the online documentation try and add the following fields to the sign up, they progress in difficulty so try one at a time and check it works before moving to the next.
 
 - a username field to sign up with validation that the length has to be between 8 and 12
 - a title field that is a selection field type with the values Mr, Ms, Dr
+- a photo field that allows the user to submit a thumbnail image of themselves (hint: try [Flask-WTF uploads](https://flask-wtf.readthedocs.io/en/stable/form.html#module-flask_wtf.file) or [Flask-Uploads](https://flask-uploads.readthedocs.io/en/latest/)).
 
