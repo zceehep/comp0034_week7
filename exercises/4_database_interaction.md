@@ -125,9 +125,32 @@ def signup():
         db.session.commit()
         flash(f"Hello, {user.firstname} {user.lastname}. You are signed up.")
         return redirect(url_for('main.index'))
-    return render_template('signup_no_helper.html', title='Sign Up', form=form)
+    return render_template('signup.html', title='Sign Up', form=form)
 ```
+However, if there is an error when saving to the database the above method will fail. Instead we will use a try/except:
 
+```python
+@auth_bp.route('/signup', methods=['GET', 'POST'])
+def signup():
+    form = SignupForm(request.form)
+    if form.validate_on_submit():
+        '''
+        name = form.first_name.data
+        flash(f"Hello, {name}. You are signed up.")
+        '''
+        user = User(firstname=form.first_name.data, lastname=form.last_name.data, email=form.email.data)
+        user.set_password(form.password.data)
+        try:
+            db.session.add(user)
+            db.session.commit()
+            flash(f"Hello, {user.firstname} {user.lastname}. You are signed up.")
+        except IntegrityError:
+            db.session.rollback()
+            flash(f'Error, unable to register {form.email.data}. ', 'error')
+            return redirect(url_for('auth.signup'))
+        return redirect(url_for('main.index'))
+    return render_template('signup.html', title='Sign Up', form=form)
+```
 You should now be able to restart the app, signup a user and then try to sign up again with the same email address. You can check the database to see if your details have been saved. 
 
 ## Working with existing databases
