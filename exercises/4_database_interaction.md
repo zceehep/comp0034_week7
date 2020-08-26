@@ -110,7 +110,7 @@ class SignupForm(FlaskForm):
             raise ValidationError('An account is already registered for that email address')
 ```
 
-### Add custom validation to the login form
+### Add custom validation to the LoginForm class
 
 Use the knowledge you just gained in writing a custom validator for the signup form to implement custom validatios for the login form:
 
