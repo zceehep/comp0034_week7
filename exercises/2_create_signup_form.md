@@ -138,7 +138,11 @@ Stop and restart the Flask app and go to http://127.0.0.1:5000/signup/
 Try out what happens when you do and don't meet the validation for each form.
 
 ## Create a login form
-Use the knowledge gained from the steps above to create a login form that takes the email address and the password.
+Use the knowledge gained from the steps above to create a login form with the following fields:
+ 
+- email address
+- password
+- remember me checkbox
 
 Stop and restart the Flask app and go to http://127.0.0.1:5000/login/
 

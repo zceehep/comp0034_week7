@@ -110,6 +110,13 @@ class SignupForm(FlaskForm):
             raise ValidationError('An account is already registered for that email address')
 ```
 
+### Add custom validation to the login form
+
+Use the knowledge you just gained in writing a custom validator for the signup form to implement custom validatios for the login form:
+
+- email: check if the email account exists, it not tell the user that the email address isn't registered.
+- password: check that the password is valid for that email address, if not tell them the password is invalid.
+
 ## Update the signup route to save the new user data to the database
 
 Modify `auth/auth.py` so that if the form passes validation then a new user is added to the database by creating a User object with the form field data:
