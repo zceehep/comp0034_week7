@@ -1,15 +1,10 @@
-# COMP0034 Week 6 Starter code and activities
-
-DO NOT USE - largely incomplete, rough outline only
+# COMP0034 Week 7 Starter code and activities
 
 This repository contains the starter code for week 6 and the exercises for the following:
 
-- Create a base Jinja2 template and inherit in other pages
-- Create a signup form using Flask-WTF
-- Enable Flask flash messaging
-- Create a model for the signup
-- Save signup data to a SQLite database
+1. Create a base Jinja2 template and inherit in other pages
+2. Create a signup form using Flask-WTF
+3. Enable Flask flash messaging
+4. Database interaction
 
-If you wish to see a completed example of the above then look at the starter code for week 7.
-
-
+If you wish to see a completed example of the above then look at the starter code for week 8.
