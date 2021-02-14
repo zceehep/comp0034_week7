@@ -47,6 +47,7 @@ Add the following code:
 ```python
 from my_app import db
 
+
 class User(db.Model):
     __tablename__ = "user"
     id = db.Column(db.Integer, primary_key=True)
@@ -177,9 +178,9 @@ In `create_app` you need to remove `db.create_all()` from `__init__.py` and repl
 
 In `models.py` you can use this syntax instead:
 
+```python
 from my_app import db
 
-```python
 class User(db.Model):
     ''' deal with an existing table'''
     __table__ = db.Model.metadata.tables['db.user']
