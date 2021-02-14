@@ -76,7 +76,8 @@ You can use this same structure to add any files in the `static` folder such as 
 
 ### 1.3 Add the Bootstrap javascript
 
-Refer to the [Bootstrap starter template](https://getbootstrap.com/docs/5.0/getting-started/introduction/#starter-template) which
+Refer to
+the [Bootstrap starter template](https://getbootstrap.com/docs/5.0/getting-started/introduction/#starter-template) which
 provides the links to use for the JavaScript. Some Bootstrap navbar functionality uses JavaScript so you will need to
 provide these.
 
@@ -108,8 +109,6 @@ also to
 </main>
 ```
 
-
-
 ## 2. Create an `index.html` that inherits from the base page
 
 `index.html` inherits from `base.html` so all we need to provide is the content. We will pass in the variable for title
@@ -125,7 +124,7 @@ in the route.
 
 ## 3. Edited the index route in `my_app/app.py` so that it renders `index.html` using the Flask function `render_template()`
 
-The my_app home page is currently defined in `my_app/app.py`, replace the `return` statement
+The my_app home page is currently defined in `my_app/main/routes.py`, replace the `return` statement
 with `return render_template()`. You can pass the value for any variables when you render the template, in the case of
 this app we want to page the page title.
 
@@ -140,6 +139,8 @@ def index():
 
 Now restart your Flask app.
 
+**NOTE** You may need to comment out the login_manager in create_app() as we have not fully configured login yet and it
+causes the Flask app to fail to load. If you are using the week7 starter repository then this has been done already.
 
 ## 4. Add a navigation bar
 
@@ -149,7 +150,7 @@ Use Bootstrap styling to create a navigation bar. For now it will include links 
 - community index
 - Dash dashboard
 
-Choose any of the [bootstrap navbar code](https://getbootstrap.com/docs/4.5/components/navbar/) and adapt it. Add it at
+Choose any of the [bootstrap navbar code](https://getbootstrap.com/docs/5.0/components/navbar/) and adapt it. Add it at
 the start of the <body> section.
 
 You could add the code to the base template, or you can create a template for the navbar.
@@ -161,29 +162,28 @@ Yours may look different to this depending on the same code you chose to copy, h
 links:
 
 ```jinja2
-{# example navbar.html #}
-<header>
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Community</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Dashboard</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
+{# example navigation.html #}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Community</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dash app</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 ```
 
 As we copied the code from the Bootstrap site the `href="#"` needs to be changed to provide the correct URL for our
@@ -192,19 +192,22 @@ pages.
 As with the CSS we will use a Jinja2 variable and the Flask `url_for()` as follows:
 
 ```jinja2
-{# my_app home page #}
-<a class="nav-link" href="{{ url_for("main.index") }}">Home</a>
+{# home page using main_bp blueprint #}
+<a class="nav-link" href="{{ url_for("main_bp.index") }}">Home</a>
 
 {# community blueprint home page #}
-<a class="nav-link" href="{{ url_for("community.index") }}">Community</a>
+<a class="nav-link" href="{{ url_for("community_bp.index") }}">Community</a>
 
 {# Dash app home page - this isn't a Flask route so we will have to specify the path #}
 <a class="nav-link" href="/dash_app/">Dashboard</a>
 ```
 
 ## 5. Try it yourself
+
 ### Apply the base layout to the community module index page
-Repeat the steps for `my_app/index` for the community index.
+
+Repeat the steps for `index` for the community index.
 
 ### Apply the same nav to the Dash app
+
 You do not need to do this, if you find a working solution, well done!
