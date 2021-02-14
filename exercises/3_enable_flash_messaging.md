@@ -1,12 +1,13 @@
-# Enable flash messaging
+# Providing user feedback using flash messaging and form errors
 
+## Flash messaging
 Flask provides a way to pass messages from one request to the next (and only the next) using [message flashing](https://flask.palletsprojects.com/en/1.1.x/quickstart/#message-flashing).
 
-This can be useful for highlighting errors to the user.
+This can be useful for highlighting errors or giving other feedback to the user.
 
-## Enable message flashing in the base template
+### Display flashed messages 
 
-Since we may want to do this for any page in our application let's enable this in the `base.html` template.
+Since we may want to do this for any page in our application let's enable this in the `layout.html` template.
 
 Add the following to the base jinja template above the main content:
 
@@ -43,7 +44,7 @@ def signup():
     return render_template('signup.html', title='Sign Up', form=form)
 ```
 
-## Add message flashing to a specific page
+## Using the form object's errors attribute
 
 Currently the signup form returns if it doesn’t pass the validation, however we don’t give any feedback to the user.
 

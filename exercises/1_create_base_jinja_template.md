@@ -109,6 +109,9 @@ also to
 </main>
 ```
 
+**NOTE** You will also need to create an empty html file in templates called `navigation.html` otherwise you will get an
+error. We will add code to this file later in the activity.
+
 ## 2. Create an `index.html` that inherits from the base page
 
 `index.html` inherits from `base.html` so all we need to provide is the content. We will pass in the variable for title

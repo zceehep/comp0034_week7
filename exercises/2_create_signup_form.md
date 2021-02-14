@@ -3,18 +3,18 @@
 So far we have worked with views (remember MVC?) and controllers to render those views.
 
 For this activity we will ultimately need to save the signup data which we will do in an SQLite database. The structure of this data is referred to as the 'model', indeed in many Flask apps it is often in a file called `models.py`.
-However for this activity we will focus on creating the form. We will look at database integration next week.
+However, for this activity we will focus on creating the form. We will look at database integration in a later activity.
  
 The steps we will follow for this activity are:
 
 1. Create a new python module called 'auth' and define the Blueprint
 2. In `my_app/auth` create `forms.py` with a python class for the form  (Model (partial))
 3. In `my_app/templates` create a Jinja2 template called `signup.html`  (View) 
-4. Add a route for signup to `my_app/auth/auth.py`  (Controller)
+4. Add a route for signup to `my_app/auth/routes.py`  (Controller)
 
 
 ## Create the auth package and define the Blueprint
-If you don't remember how to do this, look back to the week 5 exercises.
+If you don't remember how to do this, look back to the week 6 exercises.
 
 ## Create the signup form using Flask-WTF
 You may need to refer to the [Flask-WTF documentation](https://flask-wtf.readthedocs.io/en/stable/) for this exercise.
@@ -76,7 +76,7 @@ A [basic form layout is shown in the documentation](https://flask-wtf.readthedoc
 The form might look something like this:
 
 ```jinja2
-{% extends 'base.html' %}
+{% extends 'layout.html' %}
 {% block content %}
     <form method="POST" action="{{ url_for('auth.signup') }}">
         {{ form.csrf_token }}
