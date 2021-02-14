@@ -8,9 +8,9 @@ You may find the following references useful for this activity:
 
 By the end of this activity you will have:
 
-1. Created a base page layout (`base.html`) that is common to all the pages of your web app
-2. Created a page layout for the homepage (`index.html`) that inherits from from the base layout
-3. Edited the index route in `my_app\app.py` so that it renders `index.html` using the Flask
+1. Created a base page layout (`layout.html`) that is common to all the pages of your web app
+2. Created a page layout for the homepage (`index.html`) that inherits from the base layout
+3. Edited the index route in `my_app/app.py` so that it renders `index.html` using the Flask
    function `render_template()`
 
 Note that we are going to use Bootstrap 5 as the CSS for this example app though you are free to use any CSS. If you
@@ -64,14 +64,13 @@ Flask method called [`url_for()`](https://flask.palletsprojects.com/en/1.1.x/api
 Here is how you can use these within the HTML code:
 
 ```jinja2
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
 ```
 
 When the Flask app runs this would be converted to:
 
-```html
-
-<link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+```jinja2
+<link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
 ```
 
 You can use this same structure to add any files in the `static` folder such as images or JavaScript.
@@ -79,9 +78,17 @@ You can use this same structure to add any files in the `static` folder such as 
 ### 1.3 Add the Bootstrap javascript
 
 Refer to
-the [Bootstrap starter template](https://getbootstrap.com/docs/4.5/getting-started/introduction/#starter-template) which
-provides the links to use for the JavaScript. Some of the Bootstrap navbar functionality uses JavaScript so you will
-need to provide these.
+the [Bootstrap starter template](https://getbootstrap.com/docs/5.0/getting-started/introduction/#starter-template) which
+provides the links to use for the JavaScript. Some Bootstrap navbar functionality uses JavaScript so you will need to
+provide these.
+
+Javascript files are placed in the <script> tag and are typically placed at the end of the body section of a page. This
+is to ensure that the page does not wait for the JavaScript to be available before it starts to render.
+
+```html
+
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
+```
 
 ### 1.4 Add a navigation bar
 
