@@ -24,7 +24,7 @@ def create_app(config_classname):
     with app.app_context():
         # Import Dash application
         from dash_app.dash import init_dashboard
-        app = init_dashboard(app)
+        init_dashboard(app)
 
     from my_app.main.routes import main_bp
     app.register_blueprint(main_bp)
