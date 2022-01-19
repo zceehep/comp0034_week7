@@ -5,7 +5,7 @@ from example_app import db
 from example_app.auth.forms import SignupForm, LoginForm
 from example_app.models import User
 
-auth_bp = Blueprint('auth_bp', __name__)
+auth_bp = Blueprint('auth', __name__)
 
 
 @auth_bp.route('/signup', methods=['GET', 'POST'])
@@ -21,8 +21,8 @@ def signup():
         except IntegrityError:
             db.session.rollback()
             flash(f'Error, unable to register {form.email.data}. ', 'error')
-            return redirect(url_for('auth_bp.signup'))
-        return redirect(url_for('main_bp.index'))
+            return redirect(url_for('auth.signup'))
+        return redirect(url_for('main.index'))
     return render_template('signup.html', title='Sign Up', form=form)
 
 

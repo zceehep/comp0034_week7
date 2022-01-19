@@ -104,7 +104,7 @@ The form might look something like this:
 ```jinja2
 {% extends 'layout.html' %}
 {% block content %}
-    <form method="POST" action="{{ url_for('auth_bp.signup') }}">
+    <form method="POST" action="{{ url_for('auth.signup') }}">
         {{ form.csrf_token }}
         {{ form.first_name.label }} {{ form.first_name() }} <br>
         {{ form.last_name.label }} {{ form.last_name() }} <br>

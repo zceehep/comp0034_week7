@@ -26,7 +26,7 @@ Add the following to the base jinja template between the navbar and the main con
 {% endwith %}
 ```
 
-Change the auth_bp.signup route to flash a message and then redirect to the main.index to see this in action:
+Change the auth.signup route to flash a message and then redirect to the main.index to see this in action:
 
 ```python
 from flask import Blueprint, render_template, flash, redirect, url_for

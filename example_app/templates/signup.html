@@ -3,7 +3,7 @@
 {% block content %}
 
     {# Version using _formhelpers see: https://flask.palletsprojects.com/en/2.0.x/patterns/wtforms/#forms-in-templates #}
-    <form method=post action="{{ url_for('auth_bp.signup') }}">
+    <form method=post action="{{ url_for('auth.signup') }}">
         {{ form.csrf_token }}
         <dl>
             {{ render_field(form.first_name, class="form-control") }}
@@ -16,7 +16,7 @@
     </form>
 
     {# This version doesn't use the _formhelpers
-    <form method="POST" action="{{ url_for('auth_bp.signup') }}" class="row g3">
+    <form method="POST" action="{{ url_for('auth.signup') }}" class="row g3">
         {{ form.csrf_token }}
         <div class="col-md-6">
             {{ form.first_name.label(class='form-label') }} {{ form.first_name(class='form-control') }}

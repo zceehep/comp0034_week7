@@ -205,6 +205,6 @@ The `href="#"` needs to be changed to provide the correct URL for our pages.
 As with the CSS, use a Jinja2 variable and the Flask `url_for()` function e.g.:
 
 ```jinja2
-{# home page using main_bp blueprint #}
-<a class="nav-link" href="{{ url_for("main_bp.index") }}">Home</a>
+{# home page using main blueprint #}
+<a class="nav-link" href="{{ url_for("main.index") }}">Home</a>
 ```
