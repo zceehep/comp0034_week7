@@ -4,6 +4,7 @@ You may find the following references useful for this activity:
 
 - [Jinja 2 documentation](https://jinja.palletsprojects.com/en/3.0.x/)
 - [Primer on Jinja 2 templating](https://realpython.com/primer-on-jinja-templating/)
+- [VS Code documentation on templates](https://code.visualstudio.com/docs/python/tutorial-flask#_create-multiple-templates-that-extend-a-base-template)
 
 By the end of this activity you will have:
 
