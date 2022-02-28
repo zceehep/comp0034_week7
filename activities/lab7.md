@@ -17,8 +17,7 @@ isn't everything you will need to do!)
 
 If you are not using blueprints then you can ignore the 'main' and 'auth' prefixes in the following.
 
-- Add a base/layout html template that all pages will inherit. You may want to try and recreate the layout of your
-  homepage wireframe from COMP0035 coursework 2.
+- Add a base/layout html template that all pages will inherit. You may want to try and recreate the basic layout using your wireframes from COMP0035 coursework 2.
 - Create a Jinja2 template for the home page (index.html) that extends the base/layout.html
 - Create a route for the home page in main/routes.py to render the template.
 - Create a form using Flask-WTF for a register/sign up form using the fields that you defined in your COMP0035
