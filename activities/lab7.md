@@ -6,6 +6,8 @@ Complete activities 1 to 4 using the simple `my_flask_app` that you created last
 meaningful name than 'my_flask_app'). Or you can use the `my_flask_app` code in this repo.
 
 - [Jinja Documentation](https://jinja.palletsprojects.com/en/3.0.x/templates/)
+- [Bootstrap getting started](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
+- [Bootstrap nabar](https://getbootstrap.com/docs/5.1/components/navbar/)
 - [Flask routes](https://flask.palletsprojects.com/en/2.0.x/quickstart/#routing)
 - [Flask_WTF documentation](https://flask-wtf.readthedocs.io/en/1.0.x/)
 - [Flask-SQL Alchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/#a-minimal-application)
