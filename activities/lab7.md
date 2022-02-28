@@ -3,7 +3,7 @@
 ## Complete activities 1 to 4 (if you have not already done so)
 
 Complete activities 1 to 4 using the simple `my_flask_app` that you created last week (you hopefully gave it a more
-meaningful name than 'my_flask_app'). Or you can use the `my_flask_app` code in this repo.
+meaningful name than 'my_flask_app'); or use the `my_flask_app` code in this repo.
 
 - [Jinja Documentation](https://jinja.palletsprojects.com/en/3.0.x/templates/)
 - [Bootstrap getting started](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
