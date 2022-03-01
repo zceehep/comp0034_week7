@@ -14,7 +14,7 @@ the list below (this isn't everything you will need to do!)
 
 #### Relevant documentation
 
-- [Activity 1: Jinja templates](1_create_base_jinja_template.md)
+- [Activity 1: Jinja templates](https://github.com/nicholsons/comp0034_week7/blob/master/activities/1_create_base_jinja_template.md)
 - [Jinja Documentation](https://jinja.palletsprojects.com/en/3.0.x/templates/)
 - [Bootstrap setup](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
 - [Bootstrap navbar](https://getbootstrap.com/docs/5.1/components/navbar/)
@@ -33,7 +33,7 @@ the list below (this isn't everything you will need to do!)
 
 #### Relevant documentation
 
-- [Activity 2: Creating forms](2_create_signup_form.md)
+- [Activity 2: Creating forms](https://github.com/nicholsons/comp0034_week7/blob/master/activities/2_create_signup_form.md)
 - [Flask_WTF documentation](https://flask-wtf.readthedocs.io/en/1.0.x/)
 - [Flask routes](https://flask.palletsprojects.com/en/2.0.x/quickstart/#routing)
 - [Jinja Documentation](https://jinja.palletsprojects.com/en/3.0.x/templates/)
@@ -55,7 +55,7 @@ Repeat steps 5 - 7 to create a login form.
 
 #### Relevant documentation
 
-- [Activity 3: Enable flash messaging](3_enable_flash_messaging.md)
+- [Activity 3: Enable flash messaging](https://github.com/nicholsons/comp0034_week7/blob/master/activities/3_enable_flash_messaging.md)
 - [Flask message flashing](https://flask.palletsprojects.com/en/2.0.x/patterns/flashing/)
 
 #### Tasks for your coursework
@@ -68,6 +68,7 @@ user of your application.
 
 #### Relevant documentation
 
+- [Activity 4: Database interaction](https://github.com/nicholsons/comp0034_week7/blob/master/activities/4_database_interaction.md)
 - [Flask-SQL Alchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/#a-minimal-application)
 - [Viewing SQLite databases with Pycharm Professional](https://www.jetbrains.com/help/pycharm/sqlite.html)
 - [SQLite database explorer for VS Code](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)
