@@ -22,12 +22,12 @@ the list below (this isn't everything you will need to do!)
 
 #### Tasks for your coursework
 
-- Create a `base.html` template with Jinja variables that all includes the HTML structure and page layout elements that
+1. Create a `base.html` template with Jinja variables that all includes the HTML structure and page layout elements that
   all the pages will inherit.
     - Consider using your wireframes from COMP0035 coursework 2 as a guide.
     - Use third party CSS such as bootstrap (be consistent with your Dash app!)
-- Create a Jinja template for the home page (`index.html`) that extends the `base.html`
-- Create a route for the home page to render the index template.
+2. Create a Jinja template for the home page (`index.html`) that extends the `base.html`
+3. Create a route for the home page to render the index template.
 
 ### Creating forms
 
@@ -41,14 +41,28 @@ the list below (this isn't everything you will need to do!)
 
 #### Tasks for your coursework
 
-1. Enable your app to use CSRF protection by adding this to the main `__init__.py` (see activity 2).
-2. Create a python form class using Flask-WTF for a register/sign up form using the fields that you defined in your
+4. Enable your app to use CSRF protection by adding this to the main `__init__.py` (see activity 2).
+5. Create a python form class using Flask-WTF for a register/sign up form using the fields that you defined in your
    COMP0035 coursework (you likely had a user table in your database design that would be useful, and/or a wireframe for
    signup or register).
-3. Create a register/signup Jinja template to match the fields in the form.
-4. Create a route for the register/signup page.
+6. Create a register/signup Jinja template to match the fields in the form.
+7. Create a route for the register/signup page.
 
-Repeat steps 2 - 4 to create a login form.
+Repeat steps 5 - 7 to create a login form.
+
+
+### Enable Flask flash messaging
+
+#### Relevant documentation
+
+- [Activity 3: Enable flash messaging](3_enable_flash_messaging.md)
+- [Flask message flashing](https://flask.palletsprojects.com/en/2.0.x/patterns/flashing/)
+
+#### Tasks for your coursework
+
+8. Enable Flash messaging. You are not required to do this but you are likely to find it useful as it is a useful way to provide feedback to the
+user of your application.
+
 
 ### Create a database and update your routes to interact with it
 
@@ -66,24 +80,14 @@ Relation Map; it maps object parameters to the structure of a relational databas
 methods/functions to the classes that are used in the app but not the database. You do not need to write database CRUD
 methods as SQLAlchemy provides these for you.
 
-- Enable your app to work with Flask-SQLAlchemy by creating a flask SQLAlchemy object and initialising your Flask app to
+9. Enable your app to work with Flask-SQLAlchemy by creating a flask SQLAlchemy object and initialising your Flask app to
   it (hint: see `__init__.py` and `create_app()`)
-- Create a `models.py` and define a python User class that matches the user fields in your signup / coursework 2
+10. Create a `models.py` and define a python User class that matches the user fields in your signup / coursework 2
   database design. The class inherits the Model class from your Flask SQLAlchemy object.
-- Update `create_app()` so that after the Flask app is initialised to SQLAlchemy then you import the classes and the use
+11. Update `create_app()` so that after the Flask app is initialised to SQLAlchemy then you import the classes and the use
   the `create_all()` function to create the tables in the database.
-- Update your signup process so that it saves a new user to the database. Use an appropriate database viewer for your
+12. Update your signup process so that it saves a new user to the database. Use an appropriate database viewer for your
   IDE to check that the data is stored.
 
-### Enable Flask flash messaging
 
-#### Relevant documentation
-
-- [Activity 3: Enable flash messaging](3_enable_flash_messaging.md)
-- [Flask message flashing](https://flask.palletsprojects.com/en/2.0.x/patterns/flashing/)
-
-#### Tasks for your coursework
-
-You are not required to do this but you are likely to find it useful as it is a useful way to provide feedback to the
-user of your application.
 
